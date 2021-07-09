@@ -34,6 +34,12 @@ const allReview = [{
         position: 'Head ofami barishailla',
         reviewText: 'Cras semper non turpis quis finibus. Quisque tincidunt, elit nec imperdiet placerat, erat elit malesuada metus, ac fermentum velit lorem vel neque. Donec quis libero eu lorem faucibus congue sed ut quam. Etiam magna massa, auctor a molestie eu, laoreet sit amet turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec ut erat a velit rhoncus tempor quis ac mi. Morbi non libero tincidunt, mollis nibh .'
     },
+    {
+        img: 'img/img6.jpg',
+        name: 'Rifat Islam',
+        position: 'Head of ganja industry',
+        reviewText: 'Quisque lacus purus, finibus in eros ac, feugiat fermentum elit. Sed metus augue, rutrum ut fermentum a, placerat nec leo. Sed ex lacus, volutpat eget laoreet non, molestie a augue. Duis in elementum erat. Cras tortor diam, dapibus vel nunc ut, pretium blandit est. Cras accumsan nunc blandit urna egestas lacinia. In tempor, ex in convallis pulvinar, lorem ante faucibus metus, et laoreet lacus mauris sed leo. Pellentesque habitant .'
+    }
 ]
 const imgTag = document.getElementById("review_img");
 const reviewNumber = document.getElementById("review_num");
@@ -47,62 +53,62 @@ const allBtn = [prevBtn, nextBtn];
 
 let reviewIndex = 0;
 
-// allBtn.forEach((btn) => {
+allBtn.forEach((btn) => {
 
-//     btn.addEventListener('click', (e) => {
-//         const btnIdName = e.currentTarget.classList;
-//         if (btnIdName.contains("prevBtn")) {
-//             reviewIndex--;
-//             if (reviewIndex < 0) {
-//                 reviewIndex = (allReview.length - 1)
-//             }
-//         } else {
-//             reviewIndex++;
-//             if (reviewIndex > (allReview.length - 1)) {
-//                 reviewIndex = 0
-//             }
-//         }
+    btn.addEventListener('click', (e) => {
+        const btnIdName = e.currentTarget.classList;
+        if (btnIdName.contains("prevBtn")) {
+            reviewIndex--;
+            if (reviewIndex < 0) {
+                reviewIndex = (allReview.length - 1)
+            }
+        } else {
+            reviewIndex++;
+            if (reviewIndex > (allReview.length - 1)) {
+                reviewIndex = 0
+            }
+        }
 
 
-//         let item = allReview[reviewIndex]
-//         imgTag.src = item.img;
-//         reviewNumber.innerHTML = "#" + (reviewIndex + 1);
-//         reviewName.innerHTML = item.name;
-//         reviewPosition.innerHTML = item.position;
-//         reviewPara.innerHTML = item.reviewText;
-//     })
-// });
+        let item = allReview[reviewIndex]
+        imgTag.src = item.img;
+        reviewNumber.innerHTML = "#" + (reviewIndex + 1);
+        reviewName.innerHTML = item.name;
+        reviewPosition.innerHTML = item.position;
+        reviewPara.innerHTML = item.reviewText;
+    })
+});
 
 
 //Ostad er Code
 
 
-window.addEventListener("DOMContentLoaded", function(){
-    fliderFunction()
-});
+// window.addEventListener("DOMContentLoaded", function(){
+//     fliderFunction()
+// });
 
-function fliderFunction(){
-    let item = allReview[reviewIndex]
-    imgTag.src = item.img;
-    reviewNumber.innerHTML = "#" + (reviewIndex + 1);
-    reviewName.innerHTML = item.name;
-    reviewPosition.innerHTML = item.position;
-    reviewPara.innerHTML = item.reviewText;
-}
+// function fliderFunction(){
+//     let item = allReview[reviewIndex]
+//     imgTag.src = item.img;
+//     reviewNumber.innerHTML = "#" + (reviewIndex + 1);
+//     reviewName.innerHTML = item.name;
+//     reviewPosition.innerHTML = item.position;
+//     reviewPara.innerHTML = item.reviewText;
+// }
 
-prevBtn.addEventListener('click', () => {
-    reviewIndex--;
-    if(reviewIndex < 0){
-        reviewIndex = allReview.length -1;
-    }
-    fliderFunction()
-})
+// prevBtn.addEventListener('click', () => {
+//     reviewIndex--;
+//     if(reviewIndex < 0){
+//         reviewIndex = allReview.length -1;
+//     }
+//     fliderFunction()
+// })
 
 
-nextBtn.addEventListener('click', () => {
-    reviewIndex++;
-    if(reviewIndex > allReview.length -1){
-        reviewIndex = 0;
-    }
-    fliderFunction()
-})
+// nextBtn.addEventListener('click', () => {
+//     reviewIndex++;
+//     if(reviewIndex > allReview.length -1){
+//         reviewIndex = 0;
+//     }
+//     fliderFunction()
+// })
