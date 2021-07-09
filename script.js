@@ -47,27 +47,62 @@ const allBtn = [prevBtn, nextBtn];
 
 let reviewIndex = 0;
 
-allBtn.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        const btnIdName = e.currentTarget.classList;
-        if (btnIdName.contains("prevBtn")) {
-            reviewIndex--;
-            if (reviewIndex < 0) {
-                reviewIndex = (allReview.length - 1)
-            }
-        } else {
-            reviewIndex++;
-            if (reviewIndex > (allReview.length - 1)) {
-                reviewIndex = 0
-            }
-        }
+// allBtn.forEach((btn) => {
+
+//     btn.addEventListener('click', (e) => {
+//         const btnIdName = e.currentTarget.classList;
+//         if (btnIdName.contains("prevBtn")) {
+//             reviewIndex--;
+//             if (reviewIndex < 0) {
+//                 reviewIndex = (allReview.length - 1)
+//             }
+//         } else {
+//             reviewIndex++;
+//             if (reviewIndex > (allReview.length - 1)) {
+//                 reviewIndex = 0
+//             }
+//         }
 
 
-        let item = allReview[reviewIndex]
-        imgTag.src = item.img;
-        reviewNumber.innerHTML = "#" + (reviewIndex + 1);
-        reviewName.innerHTML = item.name;
-        reviewPosition.innerHTML = item.position;
-        reviewPara.innerHTML = item.reviewText;
-    })
+//         let item = allReview[reviewIndex]
+//         imgTag.src = item.img;
+//         reviewNumber.innerHTML = "#" + (reviewIndex + 1);
+//         reviewName.innerHTML = item.name;
+//         reviewPosition.innerHTML = item.position;
+//         reviewPara.innerHTML = item.reviewText;
+//     })
+// });
+
+
+//Ostad er Code
+
+
+window.addEventListener("DOMContentLoaded", function(){
+    fliderFunction()
 });
+
+function fliderFunction(){
+    let item = allReview[reviewIndex]
+    imgTag.src = item.img;
+    reviewNumber.innerHTML = "#" + (reviewIndex + 1);
+    reviewName.innerHTML = item.name;
+    reviewPosition.innerHTML = item.position;
+    reviewPara.innerHTML = item.reviewText;
+}
+
+prevBtn.addEventListener('click', () => {
+    reviewIndex--;
+    if(reviewIndex < 0){
+        reviewIndex = allReview.length -1;
+    }
+    fliderFunction()
+})
+
+
+nextBtn.addEventListener('click', () => {
+    reviewIndex++;
+    if(reviewIndex > allReview.length -1){
+        reviewIndex = 0;
+    }
+    fliderFunction()
+})
