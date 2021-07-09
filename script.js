@@ -1,6 +1,6 @@
 const allReview = [{
         img: 'img/shifat.jpg',
-        name: 'Shifat Islam',
+        name: 'MD. Shifatul Islam',
         position: 'CEO of WEB',
         reviewText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam hic asperiores iste magni rerum. Doloribus expedita omnis maiores minima nulla? Commodi earum quos sequi iure esse, repellat maxime, iste corrupti, molestiae ipsum alias itaque excepturi? Rerum, illum quidem veritatis quisquam vero illo necessitatibus, quaerat a at adipisci debitis minima sapiente.'
     },
