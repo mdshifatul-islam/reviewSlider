@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body{
+    background-color: skyblue;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 0;
+}
+.container{
+    width: 30%;
+    background-color: snow;
+    box-shadow: 10px 10px 40px rgb(87, 87, 87);
+}
+.review_up_box{
+    height: 300px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 45% 90%, 30% 100%, 15% 90%, 0 100%);
+}
+#review_img{
+    width: 100%;
+    z-index: -1;
+}
+.review_txt_box{
+    padding: 30px 50px;
+}
+#review_num{
+    margin-top: -100px;
+    background: skyblue;
+    color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    z-index: 999;
+    position: absolute;
+    margin-left: -20px;
+}
+#review_name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+#review_position{
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+#review_para{
+    word-break: break-all;
+    line-height: 23px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.arrow_box{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(52, 72, 80);
+    display: flex;
+    justify-content: space-around;
+}
+.arrow_box i{
+    transition: 0.3s;
+}
+.arrow_box i:hover{
+    color: skyblue;
+    cursor: pointer;
+}
